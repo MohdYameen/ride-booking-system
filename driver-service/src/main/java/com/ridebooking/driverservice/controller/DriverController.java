@@ -13,8 +13,8 @@ public class DriverController {
     @Autowired
     DriverService driverService;
 
-    //http://localhost:8081/drivers/12321/acceptRide
-    //body
+//    http://localhost:8081/drivers/12321/acceptRide
+//    body
 //    {
 //        "rideId": "12321",
 //            "driverLocation": "Bilaspur"

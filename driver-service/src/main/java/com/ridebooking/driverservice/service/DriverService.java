@@ -1,13 +1,23 @@
 package com.ridebooking.driverservice.service;
 
-import com.ridebooking.driverservice.dto.RideAcceptance;
+import com.ridebooking.common.events.RideAcceptedEvent;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DriverService {
 
-    public String acceptRide(String driverId, RideAcceptance rideAcceptance){
-        return "Driver "+driverId+" accepted ride "+ rideAcceptance.getRideId()+" from location "+rideAcceptance.getDriverLocation();
-    }
+    private final KafkaProducerService kafkaProducerService;
 
+    public DriverService(KafkaProducerService kafkaProducerService) {
+        this.kafkaProducerService = kafkaProducerService;
+    }
+    public RideAcceptedEvent acceptRide(String rideId, String driverId) {
+        RideAcceptedEvent event = new RideAcceptedEvent(
+                rideId,
+                driverId,
+                "ACCEPTED"
+        );
+        kafkaProducerService.sendRideAcceptedEvent(event);
+        return event;
+    }
 }

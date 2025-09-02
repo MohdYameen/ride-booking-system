@@ -1,8 +1,8 @@
 package ridebooking.rideservice.service;
 
+import com.ridebooking.common.events.RideRequestEvent;
 import org.springframework.stereotype.Service;
 import ridebooking.rideservice.dto.RideRequest;
-import ridebooking.rideservice.dto.RideRequestEvent;
 
 import java.util.UUID;
 

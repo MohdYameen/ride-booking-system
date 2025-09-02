@@ -1,4 +1,4 @@
-package ridebooking.rideservice.dto;
+package com.ridebooking.common.events;
 
 public class RideRequestEvent {
     private String pickupLocation;

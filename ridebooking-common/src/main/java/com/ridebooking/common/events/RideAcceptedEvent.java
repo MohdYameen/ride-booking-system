@@ -1,4 +1,4 @@
-package com.ridebooking.driverservice.dto;
+package com.ridebooking.common.events;
 
 public class RideAcceptedEvent {
     private String rideId;

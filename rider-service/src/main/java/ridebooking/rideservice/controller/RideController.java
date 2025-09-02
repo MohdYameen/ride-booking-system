@@ -1,10 +1,11 @@
 package ridebooking.rideservice.controller;
 
+
+import com.ridebooking.common.events.RideRequestEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ridebooking.rideservice.dto.RideRequest;
-import ridebooking.rideservice.dto.RideRequestEvent;
 import ridebooking.rideservice.service.RiderService;
 
 @RestController
@@ -24,7 +25,7 @@ public class RideController {
 //        this.riderService = riderService;
 //    }
 
-//     http://localhost:8080/riders/12321/requestRide
+//     http://localhost:8081/riders/12321/requestRide
 //     body
 //    {
 //        "pickupLocation": "Nainital",

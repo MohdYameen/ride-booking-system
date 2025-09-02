@@ -4,6 +4,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Spring Boot parent first -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -20,6 +21,7 @@
     <description>Ride Booking System - Monorepo for Rider, Driver, Ride Matching and Gateway</description>
 
     <modules>
+        <module>ridebooking-common</module>
         <module>rider-service</module>
         <module>driver-service</module>
         <module>ride-matching-service</module>
